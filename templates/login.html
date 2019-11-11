@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<style>
+    .d2{
+        background-image: url("{{ url_for('static' ,filename='pic1.jpg') }}");
+        background-size: cover;
+        height: 500px;
+        width: 500px;
+        margin-left: 10px;
+
+    }
+    .d1
+    {
+        height: 300px;
+        width: 500px;
+        text-align: center;
+        margin-left: 600px;
+    }
+    .banner
+{
+	width:100%;
+	height:1500px;
+	background:linear-gradient(gray,aqua);
+	text-align:center;
+	color:white;
+	position:absolute;
+	opacity:0.7;
+}
+
+
+
+
+</style>
+
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">RJIT Assignment</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#pra">Contact us</a></li>
+      <li><a href="#abc">About Us</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        <span  class="glyphicon glyphicon-user"></span> Sign Up</a>
+        <ul class="dropdown-menu">
+          <li><a href="/re_s">Student signup</a></li>
+          <li><a href="/re_t">Faculty signup</a></li>
+        </ul>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+<div class="banner" style="margin-top: -20px">
+    <div class="d2">
+    <div class="d1"><br><br><br>
+    <h1>login</h1>
+<form class="form-inline" action="/log_in" method="post">
+    <div class="form-group">
+        <label for="email">Email:</label><br>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="p1">
+    </div><br>
+    <div class="form-group">
+        <label for="pwd">Password:</label><br>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="p2">
+    </div><br>
+    <button type="submit" class="btn btn-default" style="margin-top: 23px">Submit</button>
+  </form>
+    </div>
+</div>
+
+<div >
+
+    <h2 style="text-align: center; color: white; margin-top: 100px">About us</h2>
+    <p id="abc" style="margin-top: 50px; font-size: 20px;">The Rustamji Institute of Technology (RJIT) has been set up with the objective of giving an opportunity to the children of serving BSF personnel as well as for those who have laid down their lives in service to the nation, for acquiring quality based higher technical qualification. The Border Security Force education fund sponsored the development of the Institute. The Institute is named after the founding father of Border Security Force Padma Vibhushan Late K.F. Rustamji. His high ideas and visionary zeal would be source of inspiration for the students to achieve and secure the highest goals in their career.
+The Institute is located, in the campus of BSF Academy, Tekanpur, on the Gwalior-Jhansi National Highway No. 75, at a distance of 30KMs from Gwalior. The Institute campus is self contained with all the basic facilities for all round development of students’ personality. In addition to this, the Institute has well-equipped laboratories, a rich library with internet facility, Audio-Visual facility and place for organizing and conducting various other activities.
+The Institute is offering various undergraduate and postgraduate courses affiliated to Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV), Bhopal.
+</p>
+
+    <h2 style="text-align: center; color: white; margin-top: 150px" >Contact us</h2>
+    <p id="pra" style="text-align: center;  font-size: 20px ">if you have any problem send a massage to the admin</p>
+
+
+    <form class="form-inline" action="/msg" method="post">
+    <div class="form-group">
+        <label for="email">Email:</label><br>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="s1">
+    </div><br>
+        <div class="form-group">
+        <label for="branch">Branch:</label><br>
+      <input type="branch" class="form-control" id="branch" placeholder="Enter Branch" name="s2">
+    </div><br>
+        <div class="form-group">
+        <label for="year">Year:</label><br>
+      <input type="year" class="form-control" id="year" placeholder="Enter year" name="s3">
+    </div><br>
+    <div class="form-group">
+        <label for="pwd">massage:</label><br>
+      <input type="massage" class="form-control" id="msg" placeholder="Enter massage" name="s4">
+    </div><br>
+    <button type="submit" class="btn btn-default" style="margin-top: 23px">Submit</button>
+  </form>
+
+
+</body>
+</html>
